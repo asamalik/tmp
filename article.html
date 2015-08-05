@@ -1,0 +1,133 @@
+<h1 id="fedora-developer-portal">Fedora developer portal</h1>
+
+<p>Fedora developer portal has arised as an idea from Josef Stribny and Petr Hracek. The aim of the portal is to give an overview about important development tools and projects in Fedora. Focus is targeted on beginners, advanced users and developers. <br>
+You may as a question: why do we need that portal? <br>
+The answer is really simple: In order to make it easy for developers to develop applications on Fedora - which might be Fedora Workstation, Server or Cloud - we want to show them how to use Fedora easily and provide them with best practises. If we are able to cover a set of areas, then using Fedora will become a pleasant experience for users and developers.</p>
+
+
+
+<h2 id="who-will-use-the-portal">Who will use the portal?</h2>
+
+<p>Fedora Developer Portal would show users how to develop on Fedora easily, and introduces them to new projects and tools that are available in Fedora. Fedora users will have an overview about:</p>
+
+<ul>
+<li>new technologies</li>
+<li>available developer languages</li>
+<li>projects released in each Fedora release cycle</li>
+<li>important tools in Fedora (like Docker, Vagrant, DevAssistant etc.)</li>
+<li>other tools which can be used for development</li>
+</ul>
+
+<p>The portal should be of course used by users which would like to develop applications on Fedora. Each section would provide a guide on how to setup an environment or system for given use-case.</p>
+
+<p>Nowadays, the portal looks like this: <a href="https://developer-phracek.rhcloud.com/">https://developer-phracek.rhcloud.com/</a>. However, the portal is still under development -so the design of pages is going to change.</p>
+
+<p><img src="./Fedora_developer_portal_main.png" alt="" title=""></p>
+
+<p>How the Powerful Tools section looks like can be seen on the following picture or here: <a href="https://developer-phracek.rhcloud.com/tools.html">https://developer-phracek.rhcloud.com/tools.html</a>.</p>
+
+<p><img src="./Fedora_developer_portal_tools.png" alt="" title=""></p>
+
+
+
+<h2 id="how-to-write-a-content-for-specific-area">How to write a content for specific area?</h2>
+
+<p>It is needed to cover all parts with guides in order to provide enough information about developement in Fedora. How to create a given area is described below.</p>
+
+<p>The whole portal content is placed in a GitHub repository <a href="https://github.com/developer-portal/content">https://github.com/developer-portal/content</a>. If you want to contribute, you need to <em>fork</em> our GitHub repository and make a pull request. To make changes, you can either clone the repository to your system or use the web interface directly.</p>
+
+
+
+<h3 id="how-to-clone-the-repository">How to clone the repository</h3>
+
+<p>To clone your repo, use the following command:</p>
+
+<p>git clone git@github.com:{your_github_name}/content.git</p>
+
+
+
+<h3 id="how-to-write-a-content-directly-on-the-github-website">How to write a content directly on the GitHub website</h3>
+
+<p>Select a part which you would like to create, e.g. nodejs <a href="https://github.com/developer-portal/content/tree/master/tech/languages/nodejs">https://github.com/developer-portal/content/tree/master/tech/languages/nodejs</a>.</p>
+
+<ul>
+<li>Click on <strong>+</strong> (which is mentioned after nodejs) to create a new file and write down a name of the file</li>
+<li>Provide a content.</li>
+<li>When the content is finished, press the “Propose a new file” button to save the file to GitHub</li>
+<li>Click on the “Pull Request” button and write a comment about it.</li>
+</ul>
+
+<p>Next step is on Fedora Developer Portal team to review it and give you a feedback.</p>
+
+
+
+<h3 id="how-to-cover-specific-area">How to cover specific area?</h3>
+
+<p>Each section must begin with mark in configuration language YAML, which says where relevant area belongs to. For main page <strong>ruby</strong> it is e.g.:</p>
+
+<pre>  ---
+  title: Ruby
+  page: ruby
+  section: tech-languages
+  ---
+  </pre>
+
+<p>Each page, except main page, should have syntax like:</p>
+
+<pre>  ---
+  title: Some another text which belongs to ruby
+  page: ruby
+  ---
+  </pre>
+
+<p>The content itself is written in a <a href="https://en.wikipedia.org/wiki/Markdown">MarkDown</a> language.</p>
+
+
+
+<h3 id="what-is-missing-nowadays">What is missing nowadays</h3>
+
+<p>Fedora Developer portal does not have following parts:</p>
+
+<ul>
+<li>Tools - DevAssistant, Docker, Vagrant</li>
+<li>Programming languages - Python, Php, Perl, Go, C, NodeJS, Java</li>
+<li>databases - PostgreSQL, MariaDB, SQLite</li>
+<li>Deployment - Copr, SCL, Nulecule, xdgapp, rolekit, openshift</li>
+<li>Fedora Next</li>
+</ul>
+
+<p>Parts which doesn’t have a content can be found on GitHub here <a href="https://github.com/developer-portal/content/issues">https://github.com/developer-portal/content/issues</a>.</p>
+
+
+
+<h3 id="how-to-publish-your-content">How to publish your content?</h3>
+
+<p>If you cover a part of content, you should crate a Pull Request. It will be then reviewed by the the portal developers and other community members that give you a feedback. You can then collaborate with others on your content.</p>
+
+
+
+<h3 id="ruby-example-on-the-portal">Ruby example on the portal</h3>
+
+<p>As a example, have a look at the Ruby content, which is already available on portal <a href="https://github.com/developer-portal/content/tree/master/languages/ruby">https://github.com/developer-portal/content/tree/master/languages/ruby</a>.</p>
+
+<p><img src="./Fedora_developer_portal_ruby.png" alt="" title=""></p>
+
+
+
+<h2 id="testing-instance-on-openshift">Testing instance on OpenShift</h2>
+
+<p>The developer instance of the portal is hosted on Openshift here <a href="https://developer-phracek.rhcloud.com/">https://developer-phracek.rhcloud.com/</a>, but it wasn’t officialy released - it is a development instance. For better orientation for all users the portal should have a reference directly to <a href="http://getfedora.org">http://getfedora.org</a>.</p>
+
+<p>This is good place to say thank you to Adam Šamalík, who is co-maintainer of the Fedora Developer Portal.</p>
+
+<p><strong>References:</strong></p>
+
+<ul>
+<li><a href="https://github.com/developer-portal/content">https://github.com/developer-portal/content</a></li>
+<li><a href="https://fedoraproject.org/wiki/Websites/Developer">https://fedoraproject.org/wiki/Websites/Developer</a></li>
+<li><a href="https://developer-phracek.rhcloud.com/">https://developer-phracek.rhcloud.com/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Markdown">https://en.wikipedia.org/wiki/Markdown</a></li>
+<li><a href="http://blog.samalik.com/fedora-developer-portal/">http://blog.samalik.com/fedora-developer-portal/</a></li>
+<li><a href="http://blog.samalik.com/fedora-developer-portal-prototype/">http://blog.samalik.com/fedora-developer-portal-prototype/</a></li>
+<li><a href="http://taiga.cloud.fedoraproject.org/project/fedora-developer-portal/kanban">http://taiga.cloud.fedoraproject.org/project/fedora-developer-portal/kanban</a></li>
+</ul>
