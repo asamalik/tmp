@@ -1,38 +1,38 @@
 # Fedora developer portal
 
-Fedora developer portal has arised as idea from Mr. Josef Stribny and Mr. Petr Hracek. The aim of the portal is to give an overview about important development tools or projects in Fedora. Focus is targeted to beginners, advanced users or developers.   
-Can we ask question why to have that portal?  
- Answer is really simple. In order that we make easy developers to develop applications on Fedora either on Fedora Workstation, Server or Cloud.   
-Therefore it is needed to show and advise users how to use Fedora for given area. Sort of if we are able to cover a set of areas then Fedora will be pleasanter for users and developers.
+Fedora developer portal has arised as an idea from Josef Stribny and Petr Hracek. The aim of the portal is to give an overview about important development tools and projects in Fedora. Focus is targeted on beginners, advanced users and developers.   
+You may as a question: why do we need that portal?  
+The answer is really simple: In order to make it easy for developers to develop applications on Fedora - which might be Fedora Workstation, Server or Cloud - we want to show them how to use Fedora easily and provide them with best practises. If we are able to cover a set of areas, then using Fedora will become a pleasant experience for users and developers.
 
-## For whom Fedora developer portal should serve for?
+## Who will use the portal?
 
-Fedora developer portal has the aim to make easy Fedora users as from developer point of view as to introduce new things which are available in Fedora. Fedora user therefore will have the overview:
+Fedora Developer Portal would show users how to develop on Fedora easily, and introduces them to new projects and tools that are available in Fedora. Fedora users will have an overview about:
 
-*   about new technologies,
-*   about available developer languages,
-*   about projects released in each Fedora release cycle,
-*   about important tools in Fedora (like Docker, Vagrant, DevAssistant etc.),
-*   about tools which can be used for development.
+*   new technologies
+*   available developer languages
+*   projects released in each Fedora release cycle
+*   important tools in Fedora (like Docker, Vagrant, DevAssistant etc.)
+*   other tools which can be used for development
 
-Portal should be of course used for users which would like to develop applications on Fedora. Each section, for which is user interested on, provides a guide how to setup environment or system for given area.
+The portal should be of course used by users which would like to develop applications on Fedora. Each section would provide a guide on how to setup an environment or system for given use-case.
 
-Nowadays portal looks like in following picture or directly on portal [https://developer-phracek.rhcloud.com/](https://developer-phracek.rhcloud.com/). However portal is still under development, and therefore, design of pages is going to redesign.
+Nowadays, the portal looks like this: [https://developer-phracek.rhcloud.com/](https://developer-phracek.rhcloud.com/). However, the portal is still under development -so the design of pages is going to change.
 
 ![](./Fedora_developer_portal_main.png)
 
-What is contents of Powerful Tools in Fedora can be seen on following picture or here [https://developer-phracek.rhcloud.com/tools.html](https://developer-phracek.rhcloud.com/tools.html).
+How the Powerful Tools section looks like can be seen on the following picture or here: [https://developer-phracek.rhcloud.com/tools.html](https://developer-phracek.rhcloud.com/tools.html).
 
 ![](./Fedora_developer_portal_tools.png)
 
 ## How to write a content for specific area?
 
-It is needed to cover parts with guides in order to provide condidates enough information about developement in Fedora. How to create a given area is described below.
+It is needed to cover all parts with guides in order to provide enough information about developement in Fedora. How to create a given area is described below.
 
-### How to clone portal
+### How to clone the repository
 
-Whole portal content is placed on GitHub repository [https://github.com/developer-portal/content](https://github.com/developer-portal/content). It is prerequisite to _fork_ our GitHub repository and clone the portal to your system.  
- This command can be used for it:
+The whole portal content is placed in a GitHub repository [https://github.com/developer-portal/content](https://github.com/developer-portal/content). If you want to contribute, you need to _fork_ our GitHub repository and make a pull request. To make changes, you can either clone the repository to your system or use the web interface directly.
+
+To clone your repo, use the following command:
 
 <pre>  git clone git@github.com:{your_github_name}/content.git
   </pre>
@@ -45,6 +45,7 @@ Each section must begin with mark in configuration language YAML, which says whe
   title: Ruby
   page: ruby
   section: tech-languages
+  ---
   </pre>
 
 Each page, except main page, should have syntax like:
@@ -55,19 +56,18 @@ Each page, except main page, should have syntax like:
   ---
   </pre>
 
-The itself is written in [MarkDown](https://en.wikipedia.org/wiki/Markdown) language.
+The content itself is written in a [MarkDown](https://en.wikipedia.org/wiki/Markdown) language.
 
-### How to write a portal directly on GitHub pages
+### How to write a content directly on the GitHub website
 
 Select a part which you would like to create, e.g. nodejs [https://github.com/developer-portal/content/tree/master/tech/languages/nodejs](https://github.com/developer-portal/content/tree/master/tech/languages/nodejs).
 
-*   Press on **+** (which is mentioned after nodejs) which means create a new file and write down a name of the file
+*   Click on **+** (which is mentioned after nodejs) to create a new file and write down a name of the file
 *   Provide a content.
-*   When the content is finished then press on button "Propose a new file".
-*   It saves the content to GitHub and shows you if you would like to create a Pull Request.
-*   Press on "Pull Request" and write a description about it.
+*   When the content is finished, press the "Propose a new file" button to save the file to GitHub
+*   Click on the "Pull Request" button and write a comment about it.
 
-Next step is on Fedora Developer Portal team to review it and inform you if something should be changed.
+Next step is on Fedora Developer Portal team to review it and give you a feedback.
 
 ### What is missing nowadays
 
@@ -79,21 +79,21 @@ Fedora Developer portal does not have following parts:
 *   Deployment - Copr, SCL, Nulecule, xdgapp, rolekit, openshift
 *   Fedora Next
 
-Parts which doesn't have a contant can be found on GitHub here [https://github.com/developer-portal/content/issues](https://github.com/developer-portal/content/issues).
+Parts which doesn't have a content can be found on GitHub here [https://github.com/developer-portal/content/issues](https://github.com/developer-portal/content/issues).
 
 ### How to publish your content?
 
-If user covers the part then it should be send to GitHub via Pull Request and send then to portal developers to review. Developers given part verified and eventually send a feedback what to make it better.
+If you cover a part of content, you should crate a Pull Request. It will be then reviewed by the the portal developers and other community members that give you a feedback. You can then collaborate with others on your content.
 
-### Ruby example on portal
+### Ruby example on the portal
 
-As a example we can show a ruby part, which is already available on portal [https://github.com/developer-portal/content/tree/master/languages/ruby](https://github.com/developer-portal/content/tree/master/languages/ruby).
+As a example, have a look at the Ruby content, which is already available on portal [https://github.com/developer-portal/content/tree/master/languages/ruby](https://github.com/developer-portal/content/tree/master/languages/ruby).
 
 ![](./Fedora_developer_portal_ruby.png)
 
 ## Testing instance on OpenShift
 
-Nowadays the portal is hosted on Openshift instance here [https://developer-phracek.rhcloud.com/](https://developer-phracek.rhcloud.com/), but it wasn't officialy released as was mentioned above. For better orientation for all users the portal should have reference directly on [http://getfedora.org](http://getfedora.org).
+The developer instance of the portal is hosted on Openshift here [https://developer-phracek.rhcloud.com/](https://developer-phracek.rhcloud.com/), but it wasn't officialy released - it is a development instance. For better orientation for all users the portal should have a reference directly to [http://getfedora.org](http://getfedora.org).
 
 This is good place to say thank you to Adam Šamalík, who is co-maintainer of the Fedora Developer Portal.
 
