@@ -28,14 +28,24 @@ How the Powerful Tools section looks like can be seen on the following picture o
 
 It is needed to cover all parts with guides in order to provide enough information about developement in Fedora. How to create a given area is described below.
 
-### How to clone the repository
-
 The whole portal content is placed in a GitHub repository [https://github.com/developer-portal/content](https://github.com/developer-portal/content). If you want to contribute, you need to _fork_ our GitHub repository and make a pull request. To make changes, you can either clone the repository to your system or use the web interface directly.
+
+### How to clone the repository
 
 To clone your repo, use the following command:
 
-<pre>  git clone git@github.com:{your_github_name}/content.git
-  </pre>
+git clone git@github.com:{your_github_name}/content.git
+  
+### How to write a content directly on the GitHub website
+
+Select a part which you would like to create, e.g. nodejs [https://github.com/developer-portal/content/tree/master/tech/languages/nodejs](https://github.com/developer-portal/content/tree/master/tech/languages/nodejs).
+
+*   Click on **+** (which is mentioned after nodejs) to create a new file and write down a name of the file
+*   Provide a content.
+*   When the content is finished, press the "Propose a new file" button to save the file to GitHub
+*   Click on the "Pull Request" button and write a comment about it.
+
+Next step is on Fedora Developer Portal team to review it and give you a feedback.
 
 ### How to cover specific area?
 
@@ -57,17 +67,6 @@ Each page, except main page, should have syntax like:
   </pre>
 
 The content itself is written in a [MarkDown](https://en.wikipedia.org/wiki/Markdown) language.
-
-### How to write a content directly on the GitHub website
-
-Select a part which you would like to create, e.g. nodejs [https://github.com/developer-portal/content/tree/master/tech/languages/nodejs](https://github.com/developer-portal/content/tree/master/tech/languages/nodejs).
-
-*   Click on **+** (which is mentioned after nodejs) to create a new file and write down a name of the file
-*   Provide a content.
-*   When the content is finished, press the "Propose a new file" button to save the file to GitHub
-*   Click on the "Pull Request" button and write a comment about it.
-
-Next step is on Fedora Developer Portal team to review it and give you a feedback.
 
 ### What is missing nowadays
 
